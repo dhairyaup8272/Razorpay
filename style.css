@@ -1,0 +1,94 @@
+/* Feature section */
+.box:hover{
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    transition: 0.5s;
+}
+.box:hover img{
+    background: linear-gradient(240deg, rgba(43,132,234,1) 1%, rgba(43,200,255,1) 100%);
+}
+.box:hover .link a,i{
+    color: #56a0f4;
+}
+.box:hover .link .grp{
+    color: #56a0f4;
+}
+.image{
+    transition: all 0.5s;
+    position: relative;
+    z-index: 1;
+}
+.box::after{
+    content: "";
+    background-image: url(images/features-wave.svg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 3.5rem;
+    width: 5rem;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 90;
+    bottom: 0rem;
+}
+.box:hover::after{
+    opacity: 1;
+    border: none;
+}
+
+
+/* Feature section 2 */
+.image{
+    transition: all 0.5s;
+    position: relative;
+    z-index: 1;
+}
+.image::after{
+    content: "";
+    background-image: url(images/features2-wave.svg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    height: 4rem;
+    width: 7rem;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 90;
+    bottom: 1rem;
+}
+.image:hover::after{
+    opacity: 1;
+    border: none;
+}
+.image:hover img{
+    background: linear-gradient(240deg, rgba(81,80,224,1) 1%, rgba(78,82,242,1) 100%);
+}
+.image:hover{
+    transition: 0.5s;
+}
+
+.companiesList{
+    animation: 10s infinite linear moveCompany;
+}
+@keyframes moveCompany{
+    0% {
+        top: 0%;
+      }
+      100% {
+        top: -50%;
+      }
+
+}
+
+.ctaSection{
+    background-size: 100% 100%;
+}
+@media screen and (max-width:1024px){
+    .ctaSection{
+        background-size: 180% 100%;
+    }
+}
+.bg-property{
+    background: linear-gradient(to right, #eef9fe, #edf7ff);
+}
